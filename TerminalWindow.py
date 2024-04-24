@@ -158,6 +158,18 @@ class GUITerminal:
         self.edit_menu.add_command(label="Cut")
         self.edit_menu.add_command(label="Copy")
         self.edit_menu.add_command(label="Paste")
+        self.view_menu = Menu(self.menu_bar, tearoff=0, bg="#1e1e1e", fg="white")
+        self.menu_bar.add_cascade(label="View", menu=self.view_menu)
+        self.view_menu.add_command(label="Toggle Full Screen")
+        self.projects_menu = Menu(self.menu_bar, tearoff=0, bg="#1e1e1e", fg="white")
+        self.menu_bar.add_cascade(label="Projects", menu=self.projects_menu)
+        self.projects_menu.add_command(label="Project Manager")
+        self.tools_menu = Menu(self.menu_bar, tearoff=0, bg="#1e1e1e", fg="white")
+        self.menu_bar.add_cascade(label="Tools", menu=self.tools_menu)
+        self.tools_menu.add_command(label="Customize")
+        self.help_menu = Menu(self.menu_bar, tearoff=0, bg="#1e1e1e", fg="white")
+        self.menu_bar.add_cascade(label="Help", menu=self.help_menu)
+        self.help_menu.add_command(label="About")
 
 def main():
     root = tk.Tk()
@@ -166,4 +178,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
